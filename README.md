@@ -9,7 +9,9 @@ This is a library for [Elechouse](www.elechouse.com) [Car Driver Shield]() ,
 - CarDriverShield.h - library header file
 - CarDriverShield.cpp - library source file
 - exmples - samples folder.
+	- car\_driver\_shield\_sample0.ino - sample
 - image - some related images
+- keywords.txt - Add keywords Arduino key words list, this benefits your developing.
 
 ## How to ##
 
@@ -56,9 +58,9 @@ Most people may need to control your car by **Wireless way**, here is some recom
 - or more ...
 
 ### Run your car ###
-Control your car by sending these characters:
+Control your car by sending these `characters`:
 
-- w --> forward; 
+- `w` --> forward; 
 - s --> backward; 
 - a --> turn left; 
 - d --> turn right;
@@ -66,9 +68,9 @@ Control your car by sending these characters:
 - c --> decelerate; 
 - z --> stop;
 
-## Buy ##
+## **Buy** ##
 
-**Car Driver Shield** is on [Elechouse onlie shop](www.elechouse.com).
+***Car Driver Shield*** is on [***Elechouse onlie shop***](www.elechouse.com).
 
 
 
