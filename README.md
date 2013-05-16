@@ -1,6 +1,6 @@
 # Car Driver Shield #
 
-This is a library for [Elechouse](www.elechouse.com) [Car Driver Shield]() , 
+This is a library for [Elechouse](http://www.elechouse.com/) [Car Driver Shield]() , 
 
 ## Instruction ##
 
@@ -13,6 +13,26 @@ This is a library for [Elechouse](www.elechouse.com) [Car Driver Shield]() ,
 - image - some related images
 - keywords.txt - Add keywords Arduino key words list, this benefits your developing.
 
+### Functions ###
+***CarDriverShield*** - library class name, use to declare a user class for using library.
+
+***begin(int led_num)*** - CarDriverShield initial function. Must be called in **setup()** of arduino. `led_num`=**-32768** means no LED is needed.
+
+***forward()*** - car run forward
+
+***backward()*** - car run backward
+
+***decelerate()*** - car run decelerate
+
+***accelerate()*** - car run accelerate
+
+***turn_left()*** - car run turn_left
+
+***turn_right()*** - car run turn_right
+
+***evt_loop()*** - CarDriverShield event loop, handle speed refreshing and LED control.
+******
+
 ## How to ##
 
 *This is a quick start guide, which aims to teach you how to use this **CarDriverShield** library and tell you what you need prepare for using.*
@@ -20,7 +40,7 @@ This is a library for [Elechouse](www.elechouse.com) [Car Driver Shield]() ,
 ### Prepare ###
 
 - [Arduino Nano board](http://arduino.cc/en/Main/ArduinoBoardNano)
-- [Car Driver Shield](www.elechouse.com)
+- [Car Driver Shield](http://www.elechouse.com)
 - A toy car board with four motors(2 motors a group), [like this](http://www.emartee.com/product/42135/4WD%20Robot%20Raider%20Car%20Kits)
 
 ### Assemble ###
@@ -55,7 +75,7 @@ Most people may need to control your car by **Wireless way**, here is some recom
 - [Wifi Car](https://github.com/elechouse/wifi-car) (*Strongly recommended*)
 - Bluetooth Car (see this [Serial Bluetooth Module](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=90_91&products_id=1385)
 - 2.4GHz Car (see this [2.4GHz Module](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=90_92&products_id=2218))
-- or more ...
+- more ...
 
 ### Run your car ###
 Control your car by sending these `characters`:
@@ -70,7 +90,7 @@ Control your car by sending these `characters`:
 
 ## **Buy** ##
 
-***Car Driver Shield*** is on [***Elechouse onlie shop***](www.elechouse.com).
+***Car Driver Shield*** is on [ ***Elechouse onlie shop*** ](http://www.elechouse.com).
 
 
 
