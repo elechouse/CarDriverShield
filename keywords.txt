@@ -1,0 +1,32 @@
+#######################################
+# Syntax Coloring Map For MOTOR DRIVER
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+CarDriverShield	KEYWORD1
+CarDriver	KEYWORD1
+CARDRIVER	KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+forward	KEYWORD2
+backward	KEYWORD2
+accelerate	KEYWORD2
+decelerate	KEYWORD2
+turn_left	KEYWORD2
+turn_right	KEYWORD2
+evt_loop	KEYWORD2
+stop	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+# FORWARD	LITERAL1
+# REVERSE	LITERAL1
+# A	LITERAL1
+# B	LITERAL1
