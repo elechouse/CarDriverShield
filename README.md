@@ -26,7 +26,7 @@ This is a library for [Elechouse](www.elechouse.com) [Car Driver Shield]() ,
 ### Upload ###
 1. Download CarDriverShield.
 
-    #get through GIT tools
+    \#get through GIT tools
     git clone https://github.com/elechouse/TAIJI-UINO.git
 
 or
