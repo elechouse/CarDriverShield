@@ -22,14 +22,17 @@ This is a library for [Elechouse](www.elechouse.com) [Car Driver Shield]() ,
 - A toy car board with four motors(2 motors a group), [like this](http://www.emartee.com/product/42135/4WD%20Robot%20Raider%20Car%20Kits)
 
 ### Assemble ###
-
+	d
 ### Upload ###
+
 1. Download CarDriverShield.
 
-    \#get through GIT tools
-    git clone https://github.com/elechouse/TAIJI-UINO.git
+		#get through GIT tools :
+		git clone https://github.com/elechouse/CarDriverShield.git
 
-or
+	or
+		
+		#download zip file
 
 # download the zip file
 
