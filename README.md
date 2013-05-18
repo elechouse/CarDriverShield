@@ -70,17 +70,17 @@ This is a library for [Elechouse](http://www.elechouse.com/) [Car Driver Shield]
 1. Hit **upload** button, wait to be uploaded.
 1. Now you can control you **Toy Car** through serial port(_Default : 115200,8,N,1_),
 
-Most people may need to control your car by **Wireless way**, here is some recommended way:
+Most people may need to control your car by **wireless way**, here is some recommended way:
 
 - [Wifi Car](https://github.com/elechouse/wifi-car) (*Strongly recommended*)
 - Bluetooth Car (see this [Serial Bluetooth Module](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=90_91&products_id=1385)
 - 2.4GHz Car (see this [2.4GHz Module](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=90_92&products_id=2218))
-- more ...
+- may be more ...
 
 ### Run your car ###
-Control your car by sending these `characters`:
+Control your car by sending these characters:
 
-- `w` --> forward; 
+- w --> forward; 
 - s --> backward; 
 - a --> turn left; 
 - d --> turn right;
@@ -89,8 +89,7 @@ Control your car by sending these `characters`:
 - z --> stop;
 
 ## **Buy** ##
-
-***Car Driver Shield*** is on [ ***Elechouse onlie shop*** ](http://www.elechouse.com).
+[ ***Elechouse online shop*** ](http://www.elechouse.com).
 
 
 

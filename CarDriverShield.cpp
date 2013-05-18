@@ -51,19 +51,30 @@ void MOTOR :: begin(int led_num)
 	MOTOR_LED_OUTPUT(led_num);
 	led = led_num;
 	
+#ifdef USE_T0
+	/** Timer0 PWM phase correct 8-bit, CLKio/8 */
+	TCCR0A = 0;
+    TCCR0B = 0;
+	sbi(TCCR0A, WGM01);
+    sbi(TCCR0A, WGM00);
+    sbi(TCCR0B, CS00);
+#else
 	/** Timer1 PWM phase correct 8-bit, CLKio/8 */
 	TCCR1A = 0;
 	TCCR1B = 0;
 	TCCR1C = 0;
 	sbi(TCCR1A, WGM10);
 	sbi(TCCR1B, CS10);
+#endif
 
 	/** Timer2 PWM phase correct 8-bit, CLKio/8 */
 	TCCR2A = 0;
 	TCCR2B = 0;
 	sbi(TCCR2A, WGM20);
 	sbi(TCCR2B, CS20);
-
+	
+#if 0
+	/** EN and DIS pins are unconnected */
 	pinMode(MOTOR_A_EN, OUTPUT);
 	pinMode(MOTOR_A_DIS, OUTPUT);
 	pinMode(MOTOR_B_EN, OUTPUT);
@@ -73,6 +84,7 @@ void MOTOR :: begin(int led_num)
 	digitalWrite(MOTOR_B_DIS, LOW);
 	digitalWrite(MOTOR_A_EN, HIGH);
 	digitalWrite(MOTOR_B_EN, HIGH);
+#endif
 
 	/** PWM pin configurate */
 	pinMode(MOTOR_A_NPORT, OUTPUT);
@@ -95,6 +107,12 @@ void MOTOR :: begin(int led_num)
 	velocity_b_inc = 1;
 	velocity = MOTOR_SPEED_INIT;
 	state = MOTOR_STA_STOP;
+	
+	digitalWrite(9, LOW);
+	digitalWrite(10, LOW);
+	pinMode(9, INPUT);
+	pinMode(10, INPUT);
+	
 }
 
 /**
@@ -424,11 +442,11 @@ void MOTOR :: check_speed()
 void MOTOR :: turn(uint8_t ls, uint8_t rs)
 {
 	if(rs>ls){
-		velocity_a_inc=5;
-		velocity_b_inc=3;
-	}else{
 		velocity_a_inc=3;
-		velocity_b_inc=5;
+		velocity_b_inc=1;
+	}else{
+		velocity_a_inc=1;
+		velocity_b_inc=3;
 	}
 	set(A,rs);
 	set(B,ls);
@@ -513,21 +531,21 @@ void MOTOR :: led_process()
 		break;
 	case LED_STA_BLK:
 		led_ms = millis();
-		if( (led_ms-led_time) > 500) {
+		if( (led_ms-led_time) > MOTOR_LED_TIME_PERIOD0) {
 			led_time = led_ms;
 			MOTOR_LED_V(led);
 		}
 		break;
 	case LED_STA_BLK_QUICK:
 		led_ms = millis();
-		if( (led_ms-led_time) > 200) {
+		if( (led_ms-led_time) > MOTOR_LED_TIME_PERIOD1) {
 			led_time = led_ms;
 			MOTOR_LED_V(led);
 		}
 		break;
 	case LED_STA_BLK_FAST:
 		led_ms = millis();
-		if( (led_ms-led_time) > 50) {
+		if( (led_ms-led_time) > MOTOR_LED_TIME_PERIOD2) {
 			led_time = led_ms;
 			MOTOR_LED_V(led);
 		}
