@@ -89,7 +89,7 @@ Control your car by sending these characters:
 - z --> stop;
 
 ## **Buy** ##
-[![elechouse](./image/elechouse.png) ](http://www.elechouse.com) 
+[![elechouse](./image/elechouse.png)](http://www.elechouse.com) 
 
 
 
