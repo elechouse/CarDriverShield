@@ -41,27 +41,27 @@
 #define USE_T0
 
 #ifdef USE_T0
-	#define MOTOR_A_EN                      			/*!< Unconnected Arduino pin */
-	#define MOTOR_A_DIS                     			/*!< Arduino pin */
-	#define MOTOR_A_NPORT                   3    		/*!< PWM OC2B*/
-	#define MOTOR_A_PPORT                   11			/*!< PWM OC2A */
-	#define MOTOR_A_NPORT_REG				OCR2B		/*!< PWM OC2A output compare register*/
-	#define MOTOR_A_PPORT_REG               OCR2A		/*!< PWM OC2B output compare register*/
-	#define MOTOR_A_NPORT_PWM_ON()          sbi(TCCR2A, COM2B1);	/*!< enable portA negative pin PWM*/
-	#define MOTOR_A_NPORT_PWM_OFF()         cbi(TCCR2A, COM2B1);	/*!< disable portA negative pin PWM*/
-	#define MOTOR_A_PPORT_PWM_ON()          sbi(TCCR2A, COM2A1);	/*!< enable portA positive pin PWM*/
-	#define MOTOR_A_PPORT_PWM_OFF()         cbi(TCCR2A, COM2A1);	/*!< disable portA positive pin PWM*/
-	
-	#define MOTOR_B_EN                      			/*!< Arduino pin */
+	#define MOTOR_B_EN                      			/*!< Unconnected Arduino pin */
 	#define MOTOR_B_DIS                     			/*!< Arduino pin */
-	#define MOTOR_B_NPORT                   6			/*!< PWM OC1A*/
-	#define MOTOR_B_PPORT                   5			/*!< PWM OC1B*/
-	#define MOTOR_B_NPORT_REG				OCR0A		/*!< PWM OC1A output compare register*/
-	#define MOTOR_B_PPORT_REG               OCR0B		/*!< PWM OC1B output compare register*/
-	#define MOTOR_B_NPORT_PWM_ON()          sbi(TCCR0A, COM0A1);	/*!< enable portB negative pin PWM*/
-	#define MOTOR_B_NPORT_PWM_OFF()         cbi(TCCR0A, COM0A1);	/*!< disable portB negative pin PWM*/
-	#define MOTOR_B_PPORT_PWM_ON()          sbi(TCCR0A, COM0B1);	/*!< enable portB positive pin PWM*/
-	#define MOTOR_B_PPORT_PWM_OFF()         cbi(TCCR0A, COM0B1);	/*!< disable portB positive pin PWM*/
+	#define MOTOR_B_NPORT                   3    		/*!< PWM OC2B*/
+	#define MOTOR_B_PPORT                   11			/*!< PWM OC2A */
+	#define MOTOR_B_NPORT_REG				OCR2B		/*!< PWM OC2A output compare register*/
+	#define MOTOR_B_PPORT_REG               OCR2A		/*!< PWM OC2B output compare register*/
+	#define MOTOR_B_NPORT_PWM_ON()          sbi(TCCR2A, COM2B1);	/*!< enable portA negative pin PWM*/
+	#define MOTOR_B_NPORT_PWM_OFF()         cbi(TCCR2A, COM2B1);	/*!< disable portA negative pin PWM*/
+	#define MOTOR_B_PPORT_PWM_ON()          sbi(TCCR2A, COM2A1);	/*!< enable portA positive pin PWM*/
+	#define MOTOR_B_PPORT_PWM_OFF()         cbi(TCCR2A, COM2A1);	/*!< disable portA positive pin PWM*/
+	
+	#define MOTOR_A_EN                      			/*!< Arduino pin */
+	#define MOTOR_A_DIS                     			/*!< Arduino pin */
+	#define MOTOR_A_NPORT                   6			/*!< PWM OC1A*/
+	#define MOTOR_A_PPORT                   5			/*!< PWM OC1B*/
+	#define MOTOR_A_NPORT_REG				OCR0A		/*!< PWM OC1A output compare register*/
+	#define MOTOR_A_PPORT_REG               OCR0B		/*!< PWM OC1B output compare register*/
+	#define MOTOR_A_NPORT_PWM_ON()          sbi(TCCR0A, COM0A1);	/*!< enable portB negative pin PWM*/
+	#define MOTOR_A_NPORT_PWM_OFF()         cbi(TCCR0A, COM0A1);	/*!< disable portB negative pin PWM*/
+	#define MOTOR_A_PPORT_PWM_ON()          sbi(TCCR0A, COM0B1);	/*!< enable portB positive pin PWM*/
+	#define MOTOR_A_PPORT_PWM_OFF()         cbi(TCCR0A, COM0B1);	/*!< disable portB positive pin PWM*/
 #else
 	#define MOTOR_A_EN                      2			/*!< Arduino pin */
 	#define MOTOR_A_DIS                     4			/*!< Arduino pin */
